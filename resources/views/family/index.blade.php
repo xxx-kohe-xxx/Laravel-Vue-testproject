@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app');
 
 @section('content')
 <div class="container">
@@ -14,7 +14,10 @@
             </div>
           @endif
 
-          You are logged in!
+          MyFamily info
+          @foreach ($family as $family)
+          {{ $family->created_at }}
+          @endforeach
         </div>
       </div>
     </div>

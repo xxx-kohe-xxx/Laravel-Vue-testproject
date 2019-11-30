@@ -4,7 +4,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class FamilysTableSeeder extends Seeder
+class FamiliesTableSeeder extends Seeder
 {
   /**
    * Run the database seeds.
@@ -13,10 +13,17 @@ class FamilysTableSeeder extends Seeder
    */
   public function run()
   {
-    DB::table('familys')->insert([
+    DB::table('families')->insert([
       'user_id' => 1,
       'name' => 'test name ',
       'birth' => new Carbon(1990-01-01),
+      'created_at' => Carbon::now(),
+      'updated_at' => Carbon::now(),
+    ]);
+    DB::table('families')->insert([
+      'user_id' => 1,
+      'name' => 'test name2 ',
+      'birth' => new Carbon(1990-06-01),
       'created_at' => Carbon::now(),
       'updated_at' => Carbon::now(),
     ]);
